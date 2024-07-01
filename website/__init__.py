@@ -27,11 +27,11 @@ def create_app():
     from .views import views
     from .auth import auth
     from .admin import admin
-    from .models import Customer , Cart , Product ,Order
+    from .models import Customer , Cart , Product , Order
 
-    app.register_blueprint(views,url_prefix='/')
-    app.register_blueprint(auth,url_prefix='/auth')
-    app.register_blueprint(admin,url_prefix='/')
+    app.register_blueprint(views, url_prefix='/')
+    app.register_blueprint(auth, url_prefix='/auth')
+    app.register_blueprint(admin, url_prefix='/admin')
 
     with app.app_context():
         create_database()
